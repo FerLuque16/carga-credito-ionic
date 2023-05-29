@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="main-container">
+    <h1 *ngIf="usuario">{{usuario.correo}}</h1>
+    <ion-button (click)="cargarCredito('8c95def646b6127282ed50454b73240300dccabc')">Cargar 10</ion-button>
+    <ion-button (click)="cargarCredito('ae338e4e0cbb4e4bcffaf9ce5b409feb8edd5172 ')">Cargar 50</ion-button>
+    <ion-button (click)="cargarCredito('2786f4877b9091dcad7f35751bfcf5d5ea712b2f')">Cargar 100</ion-button>
+    <ion-button (click)="vaciarCredito()">Vaciar</ion-button>
+  </div>
+
+</ion-content>
