@@ -1,13 +1,77 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">auth</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+<ion-content>
+  <div class="background-image">
+
+    <div class="main-container">
+      <div class="icon ion-text-center">
+        <img src="assets/icon.png">
+  
+      </div>
+      <h1 class="heading ion-text-center">Carga de Crédito<br><br></h1>
+  
+      <div class="contenedor-login">
+  
+        <p class="para">Iniciar sesión</p>
+  
+        <form [formGroup]="formData">
+        
+
+          <div class="input-container">
+            <input class="transparent-input" placeholder="Correo" formControlName="email" type="email">
+            
+
+          </div>
+          <div class="input-container">
+            
+            <input class="transparent-input" placeholder="Contraseña" formControlName="password" type="password">
+
+          </div>
+        
+  
+          <ion-button class="login-button" type="submit" (click)="login()" expand="block">Ingresar</ion-button>
+  
+        </form>
+      </div>
+
+      <!-- <div class="autologuin-container">
+
+        <ion-button (click)="completarDatos('admin@admin.com','111111')">Admin</ion-button>
+        <ion-button (click)="completarDatos('invitado@invitado.com','222222')">Invitado</ion-button>
+        <ion-button (click)="completarDatos('anonimo@anonimo.com','444444')">Anonimo</ion-button>
+        
+
+      </div> -->
+
+      <div class="autologuin-container">
+        <div class="contenedor-imagen" (click)="completarDatos('admin@admin.com','111111')">
+          <img class="img-user" src="/assets/admin.png" alt="">
+        </div>
+        <div class="contenedor-imagen" (click)="completarDatos('invitado@invitado.com','222222')">
+          <img class="img-user" src="/assets/invitado.png" alt="">
+        </div>
+        <div class="contenedor-imagen" (click)="completarDatos('anonimo@anonimo.com','444444')">
+          <img class="img-user" src="/assets/anonimo.png" alt="">
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+    
+  </div>
+
+  
+</ion-content>
+
+  
 </ion-content>
